@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Randy Salas Herrera - Full-Stack</title>
+  <link rel="canonical" href="https://galshir.com/" />
+  <meta name="theme-color" content="#282828"/>
+
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="img/randy-avatar.png" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Gal Shir is a digital artist who loves to create colorful illustrations and share his art on social media. Gal creates inspiring content that touches people and encourages them to find their inner artist.">
+
+  <!-- Facebook -->
+  <meta property="og:title" content="Soy Randy - Developers">
+  <meta property="og:description" content="Gal Shir is a digital artist who loves to create colorful illustrations and share his art on social media. Gal creates inspiring content that touches people and encourages them to find their inner artist." />
+  <meta property="og:image" content="https://galshir.com/og.png">
+  <meta property="og:url" content="https://galshir.com/">
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter -->
+  <meta name="twitter:title" content="Soy Randy - Developers">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@galgalshir" />
+  <meta name="twitter:description" content="Gal Shir is a digital artist who loves to create colorful illustrations and share his art on social media. Gal creates inspiring content that touches people and encourages them to find their inner artist." />
+  <meta name="twitter:image" content="https://galshir.com/og.png">
+
+  <link href="css/style.css" rel="stylesheet" media="all" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+
+</head>
+<body>
+
+
+<style>
+
+#header {
+  width:100vw;
+  height:50px;
+  line-height:50px;
+  border-bottom:1px solid #ececec;
+  background-color:white;
+  position:fixed;
+  top:0;
+  left:0;
+  font-size:14px;
+  z-index:10;
+}
+
+.header_wrap {
+  display:flex;
+}
+
+.header_logo img {
+  width:30px;
+  position: absolute;
+  top:10px;
+  left:10px;
+}
+
+#header a {
+  display:inline-block;
+  height:50px;
+  color:#282828;
+  text-decoration:none;
+  padding:0 14px;
+  transition: all .3s;
+  border-bottom:1px solid white;
+  box-sizing:border-box;
+}
+
+#header a:hover {
+  color:black;
+  border-bottom:1px solid #b7b7b7;
+}
+
+.header_logo {
+  font-weight:500;
+}
+
+.header_logo span {
+  margin-left:40px;
+}
+
+.header_right {
+  position: absolute;
+  right:0;
+  top:0;
+  display:inline-flex;
+  box-sizing:border-box;
+}
+
+.header_social {
+  display:inline-flex;
+}
+
+.header_social a {
+  position:relative;
+}
+
+.header_social img {
+  position:relative;
+  top:5px;
+  width:20px;
+  filter: brightness(0%);
+  opacity:0.9;
+  transition: all .3s;
+}
+
+.header_social a:hover img {
+  filter: brightness(100%);
+  opacity:1;
+}
+
+#header a.current {
+  border-bottom:1px solid #282828
+}
+
+#header a[data-page=home].current, #header a[data-page=home]:hover {
+  border-bottom:1px solid white;
+}
+
+@media screen and (max-width: 820px) {
+  #header {
+    height:91px;
+  }
+  #header a, #header a:hover {
+    border-bottom:0;
+    padding:0 8px;
+  }
+  .header_wrap {
+    height:100px;
+    justify-content:space-between;
+    padding:0 14px
+  }
+  .header_logo img {
+    left:14px;
+  }
+  .header_right {
+    width:100vw;
+    height:40px;
+    line-height:40px;
+    top:50px;
+    justify-content:space-between;
+    border-top:1px solid #ececec;
+    padding:0 14px
+  }
+  .header_social {
+    justify-content:space-between;
+    width:60%;
+  }
+  #header .header_social a, #header .header_right a {
+    height:40px;
+    line-height:40px;
+  }
+  .header_social img {
+    top:5px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  #header .header_logo {
+    padding-left:0;
+    width:40px;
+  }
+  .header_logo span {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #header {
+    font-size:12px;
+  }
+}
+
+</style>
+
+<div id="header">
+  <div class="wrap header_wrap">
+    <a onclick="ga('send', 'event', 'click', 'header_home');" href="/" class="header_logo" data-page="home"><img src="img/randy-avatar.png" /><span>Randy Salas Herrera</span></a>
+    <a onclick="ga('send', 'event', 'click', 'header_brushes');" href="php.html" data-page="brushes">Php</a>
+    <a onclick="ga('send', 'event', 'click', 'header_wallpapers');" href="java.html" data-page="wallpapers">Java</a>
+    <a onclick="ga('send', 'event', 'click', 'header_colorhunt');"  href="#" data-page="colorhunt">Python</a>
+    <a onclick="ga('send', 'event', 'click', 'header_prints');"  href="#" data-page="prints">.Net</a>
+    <div class="header_right">
+      <div class="header_social">
+        <a style="animation-delay:.4s" target="_blank" onclick="ga('send', 'event', 'click', 'header_instagram');" href="https://www.instagram.com/randysalasherrera" class="fade instagram"><img src="img/i-instagram.png" /></a>
+        <a style="animation-delay:.6s" target="_blank" onclick="ga('send', 'event', 'click', 'header_youtube');" href="https://github.com/RandySalasHerrera" class="fade youtube"><img src="img/i-github.ico" /></a>
+        <a style="animation-delay:1s" target="_blank" onclick="ga('send', 'event', 'click', 'header_facebook');" href="https://www.facebook.com/randy.salasherrera.16" class="fade facebook"><img src="img/i-facebook.png" /></a>
+      </div>
+      <a onclick="ga('send', 'event', 'click', 'header_bio');" href="bio.html" data-page="bio">Bio</a>
+      <a onclick="ga('send', 'event', 'click', 'header_contact');" href="contact.html" data-page="contact">Contact</a>
+    </div>
+  </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+.wallpapers {
+  text-align: center;
+}
+
+.wallpapers p {
+  max-width:700px;
+  margin:40px auto;
+}
+
+.item {
+  width:270px;
+  height:480px;
+  background-size:cover;
+  border-radius:5px;
+  color:white;
+  display:inline-block;
+  margin:30px;
+  text-align:center;
+  padding-top:34px;
+  box-sizing: border-box;
+  background-color:#ececec;
+  transition: all 0.2s;
+  font-family: 'Roboto';
+}
+
+.item:hover {
+  color:white;
+}
+
+.item.bright, .item.bright:hover {
+  color: rgba(0,0,0,0.7)
+}
+
+.item .time {
+  font-size:48px;
+  font-weight:300;
+}
+
+@media screen and (max-width: 700px) {
+  h1 { max-width: 300px; }
+}
+
+</style>
+
+<div class="wrap wallpapers">
+  <h1>Projects Developed in Java</h1>
+  <p>These are some of the projects I have developed in Java, Android Studio and Api Rest-Full Laravel. 🙃<p>
+  <div id="items">
+    <a target="_blank" class="item" style='background-image: url("img/cobradiario-android.png");' href="https://play.google.com/store/apps/details?id=com.prestamos.cobradiario"></a>
+    <a target="_blank" class="item" style='background-image: url("img/recetas-android.png");' href="https://play.google.com/store/apps/details?id=com.ensaladas.saludables"></a>
+  </div>
+</div>
+
+</body>
+</html>
